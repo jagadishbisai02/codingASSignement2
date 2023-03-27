@@ -121,8 +121,22 @@ app.get("/user/tweets/feed/", authenticateToken, async (request, response) => {
   response.send(tweetQueries);
 });
 
+//API4
 app.get("/user/following/", authenticateToken, async (request, response) => {
   const followingQuery = `SELECT user.name FROM user INNER JOINT follower ON follower.following_user_id = user.user_id;`;
-  const followers = await db.all(followingQuery);
+  const following = await db.all(followingQuery);
+  response.send(following);
+});
+
+//API5
+app.get("/user/followers/", authenticateToken, async (request, response) => {
+  const followersQuery = `SELECT user.name FROM user INNER JOINT follower ON user.user_id = follower.follower_user_id;`;
+  const followers = await db.get(followersQuery);
   response.send(followers);
 });
+
+//API6
+app.get("/tweets/:tweetId/", authenticateToken, async(request, response) =>{
+    const {tweetId} = request.params;
+    
+})

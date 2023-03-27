@@ -26,3 +26,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZ
 ###
 GET http://localhost:3000/user/following/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc5OTIzMDY4fQ.Bz0QRMPnsmG_0HZZGpTEGY6UQg7jzQldH7ZNN4cEabo
+
+###
+GET http://localhost:3000/user/followers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjc5OTIzMDY4fQ.Bz0QRMPnsmG_0HZZGpTEGY6UQg7jzQldH7ZNN4cEabo
